@@ -9,7 +9,7 @@ dotenv.config({
     path: './.env'
 })
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT||8550
 const app = express();
 app.use(cookieParser())
 
@@ -39,3 +39,5 @@ connectDB().then(()=>{
         console.log(`⚙️ Server is running at port : ${PORT}`); 
     })
 })
+
+export default app;
